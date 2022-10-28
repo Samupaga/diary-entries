@@ -31,15 +31,15 @@ async function show (req, res) {
     }
 }
 
-async function update (res, res) {
-    try {
-        const id = parseInt(req.params.id)
-        
+// async function update (res, res) {
+//     try {
+//         const id = parseInt(req.params.id)
 
-    } catch (err) {
 
-    }
-}
+//     } catch (err) {
+
+//     }
+// }
 
 async function destroy (req, res) {
     try {
@@ -54,4 +54,4 @@ async function destroy (req, res) {
 
 }
 
-module.exports = {index, create, show, update, destroy}
+module.exports = {index, create, show, destroy}

@@ -2,7 +2,7 @@ const express = require ('express')
 const cors = require('cors')
 
 const logRoutes = require('./middleware/logger')
-// const postRouter = require('./routers/post')
+const postRouter = require('./routers/post')
 const userRouter = require('./routers/user')
 
 const api = express()
@@ -15,7 +15,7 @@ api.get("/", (req, res) => {
     res.send("Welcome to the diary app!")
 })
 
-// api.use("/posts", postRouter)
+api.use("/posts", postRouter)
 api.use("/users", userRouter)
 
 module.exports = api
