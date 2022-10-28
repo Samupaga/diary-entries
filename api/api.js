@@ -3,7 +3,7 @@ const cors = require('cors')
 
 const logRoutes = require('./middleware/logger')
 // const postRouter = require('./routers/post')
-// const userRouter = require('./routers/post')
+const userRouter = require('./routers/user')
 
 const api = express()
 
@@ -16,6 +16,6 @@ api.get("/", (req, res) => {
 })
 
 // api.use("/posts", postRouter)
-// api.use("/users", userRouter)
+api.use("/users", userRouter)
 
 module.exports = api
